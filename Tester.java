@@ -7,5 +7,6 @@ public class Tester {
     int[][] queso = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
     System.out.println(Arrays.toString(ArrayOps.sumRows(queso)));
     System.out.println(Arrays.toString(ArrayOps.largestInRows(queso)));
+    System.out.println(ArrayOps.sum(queso));
   }
 }

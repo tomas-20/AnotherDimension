@@ -32,4 +32,7 @@ public class ArrayOps {
     }
     return output;
   }
+  public static int sum(int[][] matrix) {
+    return sum(sumRows(matrix));
+  }
 }
