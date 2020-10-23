@@ -38,4 +38,15 @@ public class ArrayOps {
   public static int sum(int[][] matrix) {
     return sum(sumRows(matrix));
   }
+  public static int[][] rotate(int[][] matrix) {
+    int length = matrix.length;
+    int rowLength = matrix[0].length;
+    int[][] output = new int[rowLength][length];
+    for (int i = 0; i < length; i ++) {
+      for (int j = 0; j < rowLength; j ++) {
+        output[j][i] = matrix[i][j];
+      }
+    }
+    return output;
+  }
 }
