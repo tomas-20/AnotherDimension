@@ -12,10 +12,12 @@ public class Tester {
   }
   public static void main(String[] args) {
     int rowSize = Integer.parseInt(args[0]);
-    int length = args.length - 1;
+    int row = Integer.parseInt(args[1]);
+    int col = Integer.parseInt(args[2]);
+    int length = args.length - 3;
     int[] arr = new int[length];
     for (int i = 0; i < length; i ++) {
-      arr[i] = Integer.parseInt(args[i + 1]);
+      arr[i] = Integer.parseInt(args[i + 3]);
     }
     int[][] arr2d = splitArray(arr, rowSize);
     System.out.println(Arrays.toString(arr));
@@ -30,5 +32,6 @@ public class Tester {
     System.out.println(ArrayOps.isSame(arr));
     System.out.println(ArrayOps.isRowMagic(arr2d));
     System.out.println(ArrayOps.isColMagic(arr2d));
+    System.out.println(ArrayOps.isLocationMagic(arr2d, row, col));
   }
 }
