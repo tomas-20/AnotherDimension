@@ -16,21 +16,24 @@ public class ArrayOps {
     }
     return output;
   }
-  public static int[] sumRows(int[][] matrix) {
+  public static int[] cheese(int[][] matrix, boolean type) {
     int length = matrix.length;
     int[] output = new int[length];
     for (int i = 0; i < length; i ++) {
-      output[i] = sum(matrix[i]);
+      if (type) {
+        output[i] = sum(matrix[i]);
+      }
+      else {
+        output[i] = largest(matrix[i]);
+      }
     }
     return output;
   }
+  public static int[] sumRows(int[][] matrix) {
+    return cheese(matrix, true);
+  }
   public static int[] largestInRows(int[][] matrix) {
-    int length = matrix.length;
-    int[] output = new int[length];
-    for (int i = 0; i < length; i ++) {
-      output[i] = largest(matrix[i]);
-    }
-    return output;
+    return cheese(matrix, false);
   }
   public static int sum(int[][] matrix) {
     return sum(sumRows(matrix));
