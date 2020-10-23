@@ -49,4 +49,16 @@ public class ArrayOps {
     }
     return output;
   }
+  public static int[] sumCols(int[][] matrix) {
+    return sumRows(rotate(matrix));
+  }
+  public static boolean isSame(int[] arr) {
+    int start = arr[0];
+    for (int i = 1; i < arr.length; i ++) {
+      if (arr[i] != start) {
+        return false;
+      }
+    }
+    return true;
+  }
 }
