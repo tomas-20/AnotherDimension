@@ -28,5 +28,7 @@ public class Tester {
     System.out.println(Arrays.deepToString(ArrayOps.rotate(arr2d)));
     System.out.println(Arrays.toString(ArrayOps.sumCols(arr2d)));
     System.out.println(ArrayOps.isSame(arr));
+    System.out.println(ArrayOps.isRowMagic(arr2d));
+    System.out.println(ArrayOps.isColMagic(arr2d));
   }
 }
