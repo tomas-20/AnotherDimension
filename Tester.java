@@ -20,18 +20,35 @@ public class Tester {
       arr[i] = Integer.parseInt(args[i + 3]);
     }
     int[][] arr2d = splitArray(arr, rowSize);
+    System.out.println("arr:");
     System.out.println(Arrays.toString(arr));
+    System.out.println("arr2d:");
     System.out.println(Arrays.deepToString(arr2d));
+    System.out.println("row:");
+    System.out.println(row);
+    System.out.println("col:");
+    System.out.println(col);
+    System.out.println("sum(arr):");
     System.out.println(ArrayOps.sum(arr));
+    System.out.println("largest(arr):");
     System.out.println(ArrayOps.largest(arr));
+    System.out.println("sumRows(arr2d):");
     System.out.println(Arrays.toString(ArrayOps.sumRows(arr2d)));
+    System.out.println("largestInRows(arr2d):");
     System.out.println(Arrays.toString(ArrayOps.largestInRows(arr2d)));
+    System.out.println("sum(arr2d):");
     System.out.println(ArrayOps.sum(arr2d));
+    System.out.println("rotate(arr2d):");
     System.out.println(Arrays.deepToString(ArrayOps.rotate(arr2d)));
+    System.out.println("sumCols(arr2d):");
     System.out.println(Arrays.toString(ArrayOps.sumCols(arr2d)));
+    System.out.println("isSame(arr):");
     System.out.println(ArrayOps.isSame(arr));
+    System.out.println("isRowMagic(arr2d):");
     System.out.println(ArrayOps.isRowMagic(arr2d));
+    System.out.println("isColMagic(arr2d):");
     System.out.println(ArrayOps.isColMagic(arr2d));
+    System.out.println("isLocationMagic(arr2d, row, col):");
     System.out.println(ArrayOps.isLocationMagic(arr2d, row, col));
   }
 }
